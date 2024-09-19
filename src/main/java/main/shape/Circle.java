@@ -2,31 +2,30 @@ package main.shape;
 
 public class Circle extends Shape{
 
-    public Circle(double width, double height, double radius, String color) {
-        super(width, height, radius, color);
-    }
+
     static double pi = Math.PI;
   @Override
     public double getRadius() {
-        radius = super.getHeight() / 2;
+        this.radius = height / 2;
 //height == diameter
-        return radius;
+        return this.radius;
     }
 
     @Override
     public double getHeight() {
-        return super.height;
+        return height;
     }
 
-    public void calculateaArea(){
+    @Override
+    public void calculateArea(){
 
-        double area = (super.getRadius()) * (super.getRadius()) * pi;
-        System.out.printf("The area of this " + color + " circle is " + "%,.2f \n", area);
+        double area = (getRadius()) * (getRadius()) * pi;
+        System.out.printf("The area of this " + this.color + " circle is " + "%,.2f \n", area);
 
     };
     public void calculateaPerimeter(){
-        double perimeter = (super.getRadius() * 2) * pi;
-        System.out.printf("The perimeter of this " + color + " circle is " + "%,.2f \n", perimeter);
+        double perimeter = (getRadius() * 2) * pi;
+        System.out.printf("The perimeter of this " + this.color + " circle is " + "%,.2f \n", perimeter);
 
     };
 

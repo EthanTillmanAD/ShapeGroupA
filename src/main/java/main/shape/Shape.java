@@ -2,17 +2,12 @@ package main.shape;
 
 public class Shape {
     // Properties
-    protected double width;
-    protected double height;
-    protected double radius;
-    protected String color;
+    public double width;
+    public double height;
+    public double radius;
+    public String color;
 
-    public Shape(double width, double height, double radius, String color) {
-        this.width = width;
-        this.height = height;
-        this.radius = radius;
-        this.color = color;
-    }
+
 
     public Shape(){
 
@@ -56,6 +51,22 @@ public class Shape {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public static void main(String[] args) {
+        Circle circle = new Circle();
+        Square square = new Square();
+
+        circle.height = 10;
+        circle.color = "red";
+
+        circle.calculateaPerimeter();
+        circle.calculateArea();
+square.width = 10;
+square.height = 10;
+square.calculatePerimeter();
+square.calculateArea();
+
     }
 }
 
